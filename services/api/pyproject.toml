@@ -11,6 +11,8 @@ dependencies = [
     "pydantic-settings>=2.7.0",
     "python-dotenv>=1.0.1",
     "httpx>=0.28.1",
+    "supabase>=2.30.0",
+    "pyjwt[crypto]>=2.9.0",
 ]
 
 [project.optional-dependencies]
@@ -19,6 +21,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]

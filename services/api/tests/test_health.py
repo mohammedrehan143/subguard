@@ -4,6 +4,8 @@ def test_api_v1_health(client):
     data = response.json()
     assert data["status"] == "healthy"
     assert data["service"] == "subguard-api"
+    assert "supabase_connected" in data
+    assert "database_mode" in data
     assert "timestamp" in data
 
 def test_root_health(client):
